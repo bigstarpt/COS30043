@@ -1,0 +1,242 @@
+/*selected styles applies for order, register, features html files*/
+/*applies to index.html, register.html, order.html*/
+body{ /*this is the style for the body of order, register, features html pages*/
+	font-family: 'Hind', sans-serif;
+	background-color:#A8A8A8;
+}
+
+header{ /*this is the style for the header of order, register, features html pages*/
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+	color: white;
+	font-size: 3em;
+	background-color:#f1f1f1;
+}
+
+nav{ /*this is the style of the navigation bar of order, register, features html pages*/
+	font-size: 1.3em;
+	color: white;
+	text-align: center;
+	width: 100%;
+	height: 28px;
+	margin: 0px; 
+	border-bottom: 1px solid white;
+	padding-bottom: 14px;
+}
+
+#navbar a{ /*this is the style of the class links in the nav bar for order, register, features html pages*/ 
+	width: 6em;
+	padding: 0.1em 0.3em 0.1em 0.3em;
+	border: 1px solid white;
+	text-decoration: none;
+	color: black;
+}
+
+#navbar a:hover { /*this is the style for when cursur moves over on of the links in the nav bar for order, register, features html pages*/
+	background-color: #BC7314;
+	border: solid black;
+}
+.current{ /*this class style highlights link if in current page*/
+	background-color: white;
+	color: black;
+}
+
+h2{ /*style for all h2s on all the html webpages*/
+	text-align: center;
+	color: white;
+}
+
+ul li{ /*this is the contextual style of all pages for the unordered lists in order, register, features html pages*/
+	list-style: none;
+}
+footer{ /*this is the style of the footer on all html pages*/
+	clear: both; /*clear: both means footer wont float*/
+	color: white;
+	text-align: center;
+}
+
+/*style applies to forms in register.html and order.html*/
+form{ /*this is the style of the form in register and order html pages*/
+	padding: 20px;
+	max-width: 800px;
+	width: 100%;
+	margin: 10px auto;
+	background-color: white;
+	background-image: linear-gradient(#F9ECD6, #e75b1e); /*this is the background image of both forms in register and order pages*/
+}
+
+input[type=text] { /*this is the style for the input type=text in register and order forms*/
+    width: 50%;
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+input[type=password]{ /*this is the style for the input type=password in the html pages of register and order forms*/
+	width: 20%;
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+input[type=email]{ /*this is the style for the input type=email in the html pages of register and order forms*/
+	width: 50%;
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+input[type=number]{ /*this is the style for the input type=number in the html pages of register and order forms*/
+	width: 30%;
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+input:focus{ /*this style creates a highlight for when end-users are filling out the input test forms in both order.html and register.html*/
+	border: 2px solid #555;
+}
+
+select { /*this style applies to all the select options in both order and register.html*/
+    width: 20%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+label { /*this style applies to the labels within the forms in order and register webpages*/
+    padding: 12px 12px 12px 10px;
+    display: inline-block;
+}
+
+.usrtxt{ /*this style applies to all div h4s in register and order webpages*/
+	color: black;
+	font-size: 15px;
+}
+
+.btn1{ /*this class style applies to the submit buttons in order and register webpages*/
+	background-color: #0BAC43; 
+    color: white;
+    padding: 13px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border: none;
+}
+
+.btn2{ /*this class style applies to the reset buttons in order and register webpages*/
+	background-color: #D11D20; 
+    color: white;
+    padding: 13px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border: none;	
+}
+
+/*style applies for index.html (home) and Features.html*/
+main{ /*this style applies to all the sub elements within the main element in indext.html*/
+	padding: 2em;
+	border: 20em;
+	background-color:#FAF9F9;
+}
+
+#motto{ /*this id style applies to the motto of Bruno Pizzeria's "SMELL. TASTE. SMILE"*/
+	font-size: 2em;
+	text-align: center;
+	border: 2px solid grey;
+	box-shadow: 5px 10px #BC7314;
+}
+ol{
+	width: 100%;
+}
+.homesections{
+	padding: 20px;
+	width: 85%;
+ 	margin-left: 5%;
+}
+/*style applies for index.html (home)*/
+.images { /*this class style is applies to all three images in index.html or the homepage*/
+	height: 200px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+}
+
+.images:hover { /*this style is for when the mouse cursur hovers over the images in index.html*/
+	opacity: 0.5;
+	background-color: white;
+}
+
+table{ /*this is the style of the table in the homepage*/
+	padding: 5px;
+	text-align: center;
+	border:2px solid grey;
+	margin-left:auto; margin-right:auto;
+}
+
+th, td{ /*this style groups the selected elements from the table of index.html*/
+	padding: 10px;
+}
+
+tr:hover {/*this style applies to the table row when the cursur hovers over it on the operating hourse table*/
+	background-color: #A8A8A8;
+}
+
+.title{ /*this is the style of all the section titles in the index/ homepage*/
+	text-align: center;
+	text-shadow: #aaa 3px 3px 3px;
+	text-decoration: underline;
+}
+
+aside{ /*this is the style of the aside in the homepage*/
+	background-color: #D76050;
+	color: white;
+	text-align: center;
+	list-style: none;
+}
+
+a{ /*this removes the underline of links in aside and any other links*/
+	text-decoration: none;
+}
+
+
+/*style applies for register.html*/
+.Gender{  /*this style applies to the gender class div of register.html*/
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+textarea{ /*this is the style of the text box in the register form webpage*/
+	width: 90%;
+}
+
+/*this style only applies to order.html*/
+label img{ 							
+	height: 50px;					/*this style applies to the images label in "choose credit card type"*/
+}
+
+
+/*this style only applies to features.html*/
+article{
+margin:1em;
+}
+
+.featuresOL{
+	padding: 30px;
+	width: 85%;
+ 	margin-left:50px;
+}

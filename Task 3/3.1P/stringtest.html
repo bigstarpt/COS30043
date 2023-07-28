@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport"content="width=device-width, initial-scale=1.0"/>
+    <title>String Name test</title>
+    <!-- Vuejs -->
+    <script src="https://unpkg.com/vue@2"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>String Test</h1>
+      <p>
+        Please enter you name:<input
+          type="text"
+          v-model="strName"
+        />
+      </p>
+      <div v-show="strName.trim().length > 0">
+        <div v-show="strName.toLowerCase() == 'caslon'">
+          Awesome name!
+        </div>
+        <div v-show="strName.toLowerCase() !== 'caslon'">
+          {{ strName }} is a not my name!
+        </div>
+      </div>
+    </div>
+    <script>
+      var strName = "";
+      vue = new Vue({
+        el: "#app",
+        data: {
+          strName,
+        },
+      });
+    </script>
+  </body>
+</html>

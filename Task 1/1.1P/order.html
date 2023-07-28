@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--this is the head of the this html file-->
+	<title>Order</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="COS10005 - Web Development Assignment 2"/>
+	<meta name="keywords" content="HTML, CSS and JS" />
+	<!--link to css stylesheet-->
+	<link rel="stylesheet" type="text/css" href="css/sotaile.css"/>
+	<!--link to javascript file-->
+	<script src="js/order_script.js"></script>
+	<!--this meta makes this html file responsive to window size-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--this links to the font family sourced from google-->
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet" >
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind">
+	<!-- site icons -->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body><!--this body contains the form content of this webpage-->
+	
+	<header><!--this is the header of this webpage-->
+		<h1 class="header-text"><img src="images/logo.png"></h1>
+	</header>
+		<!--this is the navigation bar where links are presented in the site's menu-->
+
+	<nav id="navbar"><!--this is the navigation bar which includes the links to all other 3 webpages-->
+		<!--class is used for css style of current page highlight link-->
+		<a href="index.html">Home</a>
+		<a href="register.html">Registration</a>
+		<a href="order.html" class="current">Order</a>
+		<a href="features.html">Features</a>
+	</nav>
+
+	<h2>Confirm your order below!</h2>
+
+	<form id="order" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+		<fieldset>
+			<legend>Order form</legend>
+			<div class="PDM" id="PDM">
+				<div class="usrtxt"><h4>Choose Receiving Method</h4></div>
+				<label>Pick up or Delivery method?</label>
+				<label for="PUM">Pick up</label>
+				<input type="radio" name="PDM" id="PUM" checked="checked" onclick="pickupdivs()"> <!--id used, stands for 'Pick Up Method'--><!--this option is the selected default on the initial load of page--><!--name="PDM" stands for 'Pickup or Delivery Method'-->
+				<label for="DM">Delivery</label>
+				<input type="radio" name="PDM" id="DM" onclick="deliverydivs()"><!--ID="DM" stands for 'Delivery Method'-->
+			</div>
+
+			<div id="deliveryA" class="deliveryA"><!--this div groups all divs for delivery method-->
+				<div class="usrtxt"><h4>Delivery Address:</h4></div>
+				<div>
+					<label for="dlvadd">Delivery address:</label>
+					<input type="text" name="dlvadd" id="dlvadd">
+				</div>
+				<div>
+					<label for="suburb1">Suburb:</label>
+					<input type="text" name="Suburb" id="suburb1">
+				</div>	
+				<div>
+					<label for="state1">State:</label>
+					<input type="text" name="state" id="state1">
+				</div>
+				<div>	
+					<label for="zipc1">Zip Code:</label> <!--zip code is the same as post code-->
+					<input type="number" name="ZipC" id="zipc1">
+				</div>
+			</div>
+
+			<div id="bllngadd" class="bllngadd"><!--this div groups the divs for the billing address-->
+				<div class="usrtxt"><h4>Billing Address:</h4></div>
+				<div>
+					<label for="blng">Billing address:</label>
+					<input type="text" name="bllngadd" id="blng">
+					<label></label>
+				</div>
+				<div class="bllngadd">
+					<label for="suburb2">Suburb:</label>
+					<input type="text" name="Suburb" id="suburb2">
+				</div>	
+				<div class="bllngadd">
+					<label for="state2">State:</label>
+					<input type="text" name="state" id="state2">
+				</div>
+				<div class="bllngadd">	
+					<label for="zipc2">Zip Code:</label>
+					<input type="number" name="ZipC" id="zipc2">
+				</div>	
+		 	</div>
+		 	<div id="same">
+				<label>Same as delivery address?</label>
+				<input type="checkbox" name="checkbox" onclick="FillBillingAdd()" id="SameAsDeliveryAdd">
+			</div>	 
+
+			<div class="usrtxt"><h4>Contact information:</h4></div>
+			<div class="phno">
+				 <label for="phno">Contact number:</label>
+				 <input type="number" name="phno" id="phno">
+			 </div>
+			 <div class="txtyp"><!--asks customers their email address for them to receive the receipt of their order-->
+				<label for="Email2">Email for receipt:</label>
+				<input type="Email" name="Email2" id="Email2">
+			</div>
+
+			 <!--this div asks users about their payment method and thier credit card info-->
+			<div id="payment"><!--this div includes label and radio input asking customers if they want to pay on pick up or online-->
+				<div class="usrtxt"><h4>Payment Method</h4></div>
+				<label>Pay on pick up or Online?:</label>
+				<label for="POPU">Pay on pick up</label>
+				<input type="radio" name="PYM" id="POPU" onclick="HideOnlineMtd()">
+				<label for="OLN">Online</label>
+				<input type="radio" name="PYM" id="OLN" onclick="ShowOnlineMtd()" checked="checked">
+			</div>
+
+			<div class="onlineM" id="onlineM">
+				<div class="usrtxt"><h4>Online Method</h4></div>
+				<div>
+					<label>Choose credit card type:</label><!--this asks customers about their credit card type preference-->
+					<label for="visa"><img src="images/visa.jpg" alt="visa"></label>
+					<input type="radio" name="card" id="visa">
+					<label for="master"><img src="images/master.jpg" alt="master"></label>
+					<input type="radio" name="card" id="master">
+					<label for="american"><img src="images/american.jpg" alt="american"></label>
+					<input type="radio" name="card" id="american">
+				</div>
+				<div>
+					<label for="cname">Card Name:</label><!--this asks customers what their credit card name is-->
+					<input type="text" name="online" id="cname">
+				</div>
+
+				<div>
+					<label for="cnmbr">Card number:</label><!--this asks customers about their credit card number-->
+					<input type="number" name="online" id="cnmbr">
+				</div>
+				<div>
+					<label>Expiry Date:</label>
+					<select name="MNTEXP" id="MNTEXP"><!--this asks customers what the expiry month of their credit card-->
+				        <option value="0" selected disabled>Month</option>
+				        <option value="01">01</option>
+				        <option value="02">02</option>
+				        <option value="03">03</option>
+				        <option value="04">04</option>
+				        <option value="05">05</option>
+				        <option value="06">06</option>
+				        <option value="07">07</option>
+				        <option value="08">08</option>
+				        <option value="09">09</option>
+				        <option value="10">10</option>
+				        <option value="11">11</option>
+				        <option value="12">12</option>
+			      	</select>
+			      	<select name="YREXP" id="YEXP"><!--this asks customers what the expiry year of their credit card-->
+				        <option value="0" selected disabled>Year</option>
+				        <option value="2027">2027</option>
+				        <option value="2026">2026</option>
+				        <option value="2025">2025</option>
+				        <option value="2024">2024</option>
+				        <option value="2023">2023</option>
+				        <option value="2022">2022</option>
+				        <option value="2021">2021</option>
+				        <option value="2020">2020</option>
+				        <option value="2019">2019</option>
+				        <option value="2018">2018</option>
+				    </select>
+		      </div>
+		      <div>
+					<label for="cvv">CVV:</label>
+					<input type="number" name="online" id="cvv">
+				</div>
+			</div>
+
+			<div><!--this div includes  button for users to submit or reset their form-->
+				<input type="Submit" name="Submit" value="Confirm Order" class="btn1">
+				<input type="Reset" name="Reset" value="Reset" class="btn2">
+			</div>
+		</fieldset>	
+	</form>
+	<footer> <p class="copy-title"> Copyright &copy; 2020 Bruno Pizzeria is powered by <a href="https://www.facebook.com/huynguyenn.1601" target="_blank">bigstarpt</a> </p></footer>
+</body>
+</html> 

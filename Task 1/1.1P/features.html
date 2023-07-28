@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--this is the head of the this html file-->
+	<title>Features</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="COS10005 - Web Development Assignment 2"/>
+	<meta name="keywords" content="HTML, CSS and JS" />
+	<!--link to css stylesheet-->
+	<link rel="stylesheet" type="text/css" href="css/sotaile.css"/>
+	<!--link to javascript file-->
+	<script src="js/register_script.js"></script>
+	<!--this meta makes this html file responsive to window size-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--this links to the font family sourced from google-->
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet" >
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind">
+	<!-- site icons -->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body><!--this body contains the form content of this webpage-->
+	
+	<header><!--this is the header of this webpage-->
+		<h1 class="header-text"><img src="images/logo.png"></h1>
+	</header>
+	
+	<nav id="navbar"><!--this is the navigation bar which includes the links to all other 3 webpages-->
+		<!--class is used for css style of current page highlight link-->
+		<a href="index.html">Home</a>
+		<a href="register.html">Registration</a>
+		<a href="order.html">Order</a>
+		<a href="features.html"class="current">Features</a>
+
+	</nav>
+	<main><!--this main html5 element includes all the main content of this webpage-->
+		<article><!--this is the article within the main element of this webpage-->
+
+			<!--this div is the motto of bruno pizzeria-->
+			<div id="motto"><h3>Features implemented on all 3 HTML pages.</h3></div>
+
+			<section><!--this is the first section within this article includes hyperlinks to where javascript are implemented-->
+				<div class="title"><h3>About the implemented features</h3></div>
+				<p>Below are the list of features implemented in all html pages using javascript and css.</p>
+				<ol class="featuresOL">
+					<li>In <a href="index.html">index.html Webpage layout</a>, uses Responsive.</li>
+					<li>In <a href="index.html">index.html Colour contrast</a>, uses Mixed.</li>
+					<li>In <a href="index.html">index.html Main colours used</a>, uses Black, Light Grey, Orange and White.</li>
+					<li>In <a href="index.html">CSS Styles of index.html webpage</a>, uses Bootstrap Library.</li>
+					<li>In the navigation bar of all html webpages, the link in the nav bar is highlighted when user is on that current page.</li>
+					<li>In the navigation bar of all html webpages, the animation in the nav bar is Underline From Left.</li>
+					<li>In <a href="index.html">index.html</a>, uses Fade In animation.</li>
+					<li>In <a href="index.html">index.html #Our Menu</a>, uses flaticon.</li>
+					<li>In <a href="index.html">index.html #Types of Pizza</a>, uses Wikipedia library.</li>
+					<li>In <a href="index.html">index.html #Our Location</a>, uses Google Map iframe.</li>				
+					<li>All fields in <a href="register.html">Register.html</a> and <a href="order.html">Order.html</a> are required to be filled in, if not all fields or there are missing fields not filled in, an error message will show.</li>
+					<li>In <a href="register.html">register.html</a>, if no is selected in "Would you like to tell us about your favorite  pizza, the div with id="favpizza" will be hidden, and users can proceed to submit form without receiving error message from the fields inside that div.</li>
+					<li>In <a href="register.html">register.html</a>, if Email and Re-type email are not the same, error message will be shown upon submit. This also applies to password and re-type password. In addition, password and re-type password must be 8 characters long.</li>
+					<li>In <a href="order.html">order.html</a>, Pick up is the default option in the initial load of page in which automatically hides the billing address, and same as delivery checkbox for billing address. In addition, online is also the default option for 'payment method which shows the online method for credit card information.</li>
+					<li>In <a href="order.html">order.html</a>, if users selects delivery method, the div for delivery address fields shows up as well as the same as delivery address. In addition if delivery method is selected, the payment method will be hidden. Thus, no error message will be received from the payment method if delivery method is selected.</li>
+					<li>In <a href="order.html">order.html</a>, if 'same as delivery address is ticked after users filled in their delivery address, billing address will be automatically filled in. If 'same as delivery address is ticked before filling in the fields in delivery address, error message will be shown telling users to fill in delivery address first.</li>
+					<li>In <a href="order.html">order.html</a>, postcode must be 4 digit long, and cvv/ credit card pin must be 3 digit long.</li>
+					<li>In <a href="order.html">order.html</a>, if users select their credit card type, credit card number must be of a specific numbered of digits entered. Such as , if users select visa or master card, the credit card number must be 16 digits long, and if users select american express, their credit card number must be 15 digits long.</li>
+				</ol>
+			</section>
+		</article><!--this is the end of this article within the main element of this webpage-->
+	</main>
+
+	<aside><!--this is the aside, which includes links to resources used-->
+		<p>All resources used are of this website </p>
+		<ul><!--ul means unordered list, this is used to enlist the links of resources used-->
+			<li><a href="https://www.pizzahut.co.uk/restaurants/food/"> Pizza Hut UK Menu </a></li>
+		</ul>
+	</aside>
+	<footer> <p class="copy-title"> Copyright &copy; 2020 Bruno Pizzeria is powered by <a href="https://www.facebook.com/huynguyenn.1601" target="_blank">bigstarpt</a> </p></footer>
+</body>
+</html>
